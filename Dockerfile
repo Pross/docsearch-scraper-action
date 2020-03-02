@@ -36,7 +36,7 @@ RUN git clone https://github.com/algolia/docsearch-scraper /root/docsearch-scrap
 ENV LANG en_US.UTF-8
 ENV PIPENV_HIDE_EMOJIS 1
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.6 1
-RUN pip install pipenv
+RUN pip3 install pipenv
 
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
