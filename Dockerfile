@@ -15,7 +15,7 @@ ENV DEBCONF_NONINTERACTIVE_SEEN true
 
 RUN apt-get -y update
 
-RUN apt-get install -yqq wget gnupg2 unzip curl git
+RUN apt-get install -yqq wget gnupg2 unzip curl git python3.6
 
 # Install google chrome
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
@@ -35,7 +35,7 @@ RUN git clone https://github.com/algolia/docsearch-scraper /root/docsearch-scrap
 
 ENV LANG en_US.UTF-8
 ENV PIPENV_HIDE_EMOJIS 1
-RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 1
+RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.6 1
 RUN pip install pipenv
 
 ADD entrypoint.sh /entrypoint.sh
