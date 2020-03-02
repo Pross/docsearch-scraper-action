@@ -15,7 +15,7 @@ ENV DEBCONF_NONINTERACTIVE_SEEN true
 
 RUN apt-get -y update
 
-RUN apt-get install -yqq wget gnupg2 unzip curl git python3.6 python3-setuptools
+RUN apt-get install -yqq wget gnupg2 unzip curl git python3.6 python3-pip
 
 # Install google chrome
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
